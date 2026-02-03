@@ -191,6 +191,13 @@ gtk-font-name=Roboto 11
 gtk-application-prefer-dark-theme=1
 ```
 
+Кроме того, можно настроить глобальные параметры GNOME через gsettings:
+
+```bash
+# Убирает кнопки управления окнами (свернуть, развернуть, закрыть) из заголовка окна
+gsettings set org.gnome.desktop.wm.preferences button-layout ':'
+```
+
 ### Настройки GTK-4
 
 Для приложений GTK-4 создайте или отредактируйте `~/.config/gtk-4.0/settings.ini`:
@@ -318,6 +325,9 @@ gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
 # Устанавливает базовую тему (лучше держать Adwaita, чтобы избежать ошибок импорта)
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita'
+
+# Убирает кнопки управления окнами (свернуть, развернуть, закрыть) из заголовка окна
+gsettings set org.gnome.desktop.wm.preferences button-layout ':'
 ```
 
 #### 2. Переменные окружения
